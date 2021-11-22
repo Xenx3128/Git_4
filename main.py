@@ -13,7 +13,7 @@ class Example(QMainWindow):
         self.update()
 
     def update(self):
-        db = sqlite3.connect('coffee.sqlite')
+        db = sqlite3.connect('coffe.sqlite')
         cur = db.cursor()
         items = cur.execute("""SELECT id, sort, roasting, is_ground,
           description, price, volume
@@ -40,3 +40,4 @@ if __name__ == '__main__':
     ex = Example()
     ex.show()
     sys.exit(app.exec())
+
